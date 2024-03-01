@@ -126,7 +126,8 @@ while True:
             print("Retry")
             element.click()
             time.sleep(0.5)
-
+while True:
+    time.sleep(1)
     #     element = driver.find_element(By.CLASS_NAME, "btn_blue_ang")
     #     if element:
     #         print("Retry")
