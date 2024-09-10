@@ -19,11 +19,11 @@ def play_tada():
 chrome_ver = chromedriver_autoinstaller_fix.get_chrome_version().split('.')[0]
 driver_path = f'./{chrome_ver}/chromedriver.exe'
 if os.path.exists(driver_path):
-    print(f"chrom driver is insatlled: {driver_path}")
+    print(f"chrom driver was insatlled: {driver_path}")
+    chromedriver_autoinstaller_fix.install()
 else:
     print(f"install the chrome driver(ver: {chrome_ver})")
     chromedriver_autoinstaller_fix.install(True)
-
 
 options = webdriver.ChromeOptions()
 options.add_argument('headless')
