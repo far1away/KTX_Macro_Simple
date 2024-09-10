@@ -25,10 +25,10 @@ else:
     print(f"install the chrome driver(ver: {chrome_ver})")
     chromedriver_autoinstaller_fix.install(True)
 
-options = webdriver.ChromeOptions()
-options.add_argument('headless')
-options.add_argument('disable-gpu')
-driver = webdriver.Chrome()
+ChromeOptions = webdriver.ChromeOptions()
+ChromeOptions.add_argument('--disable-gpu')
+ChromeOptions.add_argument('--log-level=3') # 브라우저 로그 레벨을 낮춤
+driver = webdriver.Chrome(options=ChromeOptions)
 
 reserv_url = 'https://www.letskorail.com/ebizprd/EbizPrdTicketpr21100W_pr21110.do#'
 login_url = "https://www.letskorail.com/korail/com/login.do"
