@@ -32,12 +32,15 @@ driver = webdriver.Chrome()
 
 reserv_url = 'https://www.letskorail.com/ebizprd/EbizPrdTicketpr21100W_pr21110.do#'
 login_url = "https://www.letskorail.com/korail/com/login.do"
+main_url="https://www.letskorail.com/ebizprd/prdMain.do"
 preset_url = "https://www.letskorail.com/korail/com/mypage/preset/preset_list.do"
 
 driver.get(login_url)
 input("Please Login, then press Enter key")
 
 try:
+    driver.get(main_url)
+    time.sleep(0.5)
     element = driver.find_element(By.CLASS_NAME, "log_nm")
     driver.get(preset_url)
 
