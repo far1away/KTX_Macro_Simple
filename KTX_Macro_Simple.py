@@ -64,8 +64,6 @@ else :
     print("Use a previously entered preset.")
 
 
-#document.getElementById("start").value="부산"
-
 driver.get(reserv_url)
 
 while True:
@@ -128,16 +126,3 @@ while True:
             time.sleep(0.5)
 while True:
     time.sleep(1)
-    #     element = driver.find_element(By.CLASS_NAME, "btn_blue_ang")
-    #     if element:
-    #         print("Retry")
-    #         element.click()
-    #         time.sleep(0.5)
-    # except NoSuchElementException:
-    #     element = driver.find_element(By.CLASS_NAME, "btn_red_ang")
-    #     if element:
-    #         print("Reservation Success")
-    #         play_tada()
-    #         break
-    #     else:
-    #         driver.get(reserv_url)
